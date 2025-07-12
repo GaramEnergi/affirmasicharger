@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIPTA ENERGI AFFIRMASI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cipta Energi Affirmasi</h1>
+        <form id="intentionForm" action="start_intention.php" method="POST">
+            <textarea name="intention" id="intentionInput" rows="5" cols="50" placeholder="Masukkan Affirmasi anda Disini" required></textarea>
+            <div class="button-group">
+                <button type="submit" id="startBtn">Mulakan </button>
+                <input type="file" id="loadFile" style="display: none;">
+                <button type="button" id="loadFileBtn">Muat Naik File</button>
+            </div>
+            <label>
+                <input type="checkbox" id="repostCheckbox"> Repeat Setiap Jam
+            </label>
+        </form>
+
+        <div id="intentionStatus" class="hidden">
+            <p><b>Niat Anda Sedang Dicas.<br><br>Anda Sudah Menghantar Affirmasi Untuk Convert Kepada Energi:</b></p>
+            <p id="submittedIntention"></p>
+            <button id="stopBtn">Hentikan Charge</button>
+            <b>
+                <div id="timer" class="timer">00:00:00</div>
+            </b> <!-- Timer added -->
+        </div>
+    </div>
+
+    <script src="intention_control.js"></script>
+</body>
+
+</html>
